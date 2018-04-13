@@ -1,0 +1,16 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+    <!-- Stock business object -->
+    <bean id="employeeService" class="hcmus.fetel.nhnhan.xml.service.EmployeeServiceImpl">
+        <property name="employeeDao" ref="employeeDao" />
+    </bean>
+
+    <!-- Employee Data Access Object -->
+    <bean id="employeeDao" class="hcmus.fetel.nhnhan.xml.dao.EmployeeDaoImpl">
+        <property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>
+
+</beans>
